@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Dec 09 12:43:26 CST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-017d-9d80-d454-00000f084808 
+on database directory /Users/xiehongwei/IdeaProjects/mybatis-parent-new/mybatis-source-new/ibderby with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Loaded from file:/Users/xiehongwei/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=JetBrains s.r.o.
+java.runtime.version=11.0.13+7-b1751.19
+user.dir=/Users/xiehongwei/IdeaProjects/mybatis-parent-new/mybatis-source-new
+os.name=Mac OS X
+os.arch=x86_64
+os.version=11.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

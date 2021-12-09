@@ -21,8 +21,12 @@
 
   <groupId>org.mybatis</groupId>
   <artifactId>mybatis-parent</artifactId>
-  <version>34-SNAPSHOT</version>
+  <version>32-SNAPSHOT</version>
   <packaging>pom</packaging>
+
+  <modules>
+    <module>mybatis-source-new</module>
+  </modules>
 
   <name>mybatis-parent</name>
   <description>The MyBatis parent POM.</description>
@@ -40,167 +44,6 @@
     </license>
   </licenses>
 
-  <developers>
-    <!-- committers are enlisted by name ASC, except Clinton who is the founder -->
-    <developer>
-      <id>cbegin</id>
-      <name>Clinton Begin</name>
-      <email>clinton.begin@gmail.com</email>
-      <roles>
-        <role>Owner</role>
-        <role>Founder</role>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>brandon.goodin</id>
-      <name>Brandon Goodin</name>
-      <email>brandon.goodin@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>christianpoitras</id>
-      <name>Christian Poitras</name>
-      <email>christian.poitras@ircm.qc.ca</email>
-      <timezone>-5</timezone>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>emacarron</id>
-      <name>Eduardo Macarron</name>
-      <email>eduardo.macarron@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>mnesarco</id>
-      <name>Frank Martinez</name>
-      <email>mnesarco@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>agustafson</id>
-      <name>Andrew Gustafson</name>
-      <email>gus4000@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>hpresnall</id>
-      <name>Hunter Presnall</name>
-      <email>hpresnall@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>harawata</id>
-      <name>Iwao Ave</name>
-      <email>harawata@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>jeffgbutler</id>
-      <name>Jeff Butler</name>
-      <email>jeffgbutler@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>hazendaz</id>
-      <name>Jeremy Landis</name>
-      <email>jeremylandis@hotmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-      <timezone>-5</timezone>
-    </developer>
-
-    <developer>
-      <id>nospam@kaigrabfelder.de</id>
-      <name>Kai Grabfelder</name>
-      <email>nospam@kaigrabfelder.de</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>lmeadors</id>
-      <name>Larry Meadors</name>
-      <email>larry.meadors@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>marcosperanza</id>
-      <name>Marco Speranza</name>
-      <email>marco.speranza79@gmail.com</email>
-      <timezone>+1</timezone>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>nmaves</id>
-      <name>Nathan Maves</name>
-      <email>nathan.maves@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>pboonphong</id>
-      <name>Putthiphong Boonphong</name>
-      <email>putthiphong.boonphong@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>simonetripodi</id>
-      <name>Simone Tripodi</name>
-      <email>simone.tripodi@gmail.com</email>
-      <timezone>+1</timezone>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-
-    <developer>
-      <id>h3adache</id>
-      <name>Tim Chen</name>
-      <email>chengt@gmail.com</email>
-      <roles>
-        <role>Committer</role>
-      </roles>
-    </developer>
-  </developers>
 
   <mailingLists>
     <mailingList>
@@ -266,7 +109,7 @@
      | General configuration
     -->
     <checkstyle.config>checkstyle.xml</checkstyle.config>
-    <clirr.comparisonVersion>32</clirr.comparisonVersion>
+    <clirr.comparisonVersion>31</clirr.comparisonVersion>
     <formatter.config>eclipse-formatter-config-2space.xml</formatter.config>
     <gcu.product>${project.name}</gcu.product>
     <html.javadocType>-html5</html.javadocType>
@@ -290,53 +133,52 @@
     <!--
      | Dependency versions
     -->
-    <asm.version>9.2</asm.version>
+    <asm.version>8.0.1</asm.version>
     <base-bundle.version>9</base-bundle.version>
-    <bind-api.version>2.3.3</bind-api.version>
-    <bnd.version>6.1.0</bnd.version>
-    <build-tools.version>1.2.6</build-tools.version>
-    <checkstyle-core.version>9.2</checkstyle-core.version>
-    <fluido.version>1.10.0</fluido.version>
+    <bnd.version>5.1.2</bnd.version>
+    <build-tools.version>1.2.4</build-tools.version>
+    <checkstyle-core.version>8.35</checkstyle-core.version>
+    <fluido.version>1.9</fluido.version>
     <wagon-git.version>2.0.3</wagon-git.version> <!-- Do not upgrade to 2.0.4 as it does not work with ssh properly -->
-    <wagon-ssh.version>3.4.3</wagon-ssh.version>
+    <wagon-ssh.version>3.4.0</wagon-ssh.version>
 
     <!--
      | Plugins versions
     -->
-    <animal.version>1.20</animal.version>
+    <animal.version>1.19</animal.version>
     <antrun.version>3.0.0</antrun.version>
     <assembly.version>3.3.0</assembly.version>
-    <bundle.version>5.1.2</bundle.version>
+    <bundle.version>5.1.1</bundle.version>
     <changes.version>2.12.1</changes.version>
-    <checkstyle.plugin>3.1.2</checkstyle.plugin>
+    <checkstyle.plugin>3.1.1</checkstyle.plugin>
     <clean.version>3.1.0</clean.version>
     <clirr.version>2.8</clirr.version>
     <compiler.version>3.8.1</compiler.version>
     <coveralls.version>4.3.0</coveralls.version>
-    <dependency.version>3.2.0</dependency.version>
+    <dependency.version>3.1.2</dependency.version>
     <deploy.version>3.0.0-M1</deploy.version>
-    <enforcer.version note="Skip 3.0.0-M2/M3 as it does not work (known bug)">3.0.0</enforcer.version>
-    <formatter.version>2.17.0</formatter.version>
-    <gpg.version>3.0.1</gpg.version>
-    <impsort.version>1.6.2</impsort.version>
+    <enforcer.version>3.0.0-M1</enforcer.version> <!-- Skip 3.0.0-M2/M3 as it does not work (known bug) -->
+    <formatter.version>2.12.1</formatter.version>
+    <gpg.version>1.6</gpg.version>
+    <impsort.version>1.4.1</impsort.version>
     <install.version>3.0.0-M1</install.version>
-    <jacoco.version>0.8.7</jacoco.version>
+    <jacoco.version>0.8.5</jacoco.version>
     <jar.version>3.2.0</jar.version>
-    <javadoc.version>3.3.1</javadoc.version>
-    <jxr.version>3.1.1</jxr.version>
-    <license.version>4.1</license.version>
+    <javadoc.version>3.2.0</javadoc.version>
+    <jxr.version>3.0.0</jxr.version>
+    <license.version>3.0</license.version>
     <lifecycle.version>1.0.0</lifecycle.version>
-    <modernizer.plugin>2.3.0</modernizer.plugin>
-    <pdf.version>1.5.1</pdf.version>
-    <pmd.version>3.15.0</pmd.version>
-    <project-info.version>3.1.2</project-info.version>
-    <release.version>3.0.0-M4</release.version>
+    <modernizer.plugin>2.1.0</modernizer.plugin>
+    <pdf.version>1.4</pdf.version>
+    <pmd.version>3.13.0</pmd.version>
+    <project-info.version>3.1.0</project-info.version>
+    <release.version>2.5.3</release.version> <!-- Skip 3.0.0-M1 as it has a major defect -->
     <resources.version>3.2.0</resources.version>
-    <scm.version>1.12.0</scm.version>
+    <scm.version>1.11.2</scm.version>
     <shade.version>3.2.4</shade.version>
     <site.version>3.9.1</site.version>
     <source.version>3.2.1</source.version>
-    <spotbugs.version>4.5.0.0</spotbugs.version>
+    <spotbugs.version>4.0.4</spotbugs.version>
     <surefire.version>3.0.0-M5</surefire.version>
     <taglist.version>2.4</taglist.version>
     <versions.version>2.8.1</versions.version>
@@ -373,7 +215,16 @@
             <excludes>
               <exclude>**/*.ctrl</exclude>
               <exclude>**/*.dat</exclude>
+              <exclude>**/*.lck</exclude>
+              <exclude>**/*.log</exclude>
+              <exclude>**/*maven-wrapper.properties</exclude>
+              <exclude>**/*MavenWrapperDownloader.java</exclude>
+              <exclude>.factorypath</exclude>
+              <exclude>.gitattributes</exclude>
+              <exclude>mvnw</exclude>
+              <exclude>mvnw.cmd</exclude>
               <exclude>ICLA</exclude>
+              <exclude>LICENSE</exclude>
               <exclude>KEYS</exclude>
               <exclude>NOTICE</exclude>
             </excludes>
@@ -392,16 +243,16 @@
 
         <!-- Antrun here only to override eclipse settings -->
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>${antrun.version}</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>${antrun.version}</version>
         </plugin>
 
         <!-- Assembly here only to override eclipse settings -->
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>${assembly.version}</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${assembly.version}</version>
         </plugin>
 
         <plugin>
@@ -425,13 +276,6 @@
           <groupId>org.eluder.coveralls</groupId>
           <artifactId>coveralls-maven-plugin</artifactId>
           <version>${coveralls.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>jakarta.xml.bind</groupId>
-              <artifactId>jakarta.xml.bind-api</artifactId>
-              <version>${bind-api.version}</version>
-            </dependency>
-          </dependencies>
         </plugin>
 
         <plugin>
@@ -453,12 +297,12 @@
         </plugin>
 
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>${javadoc.version}</version>
-            <configuration>
-                <quiet>true</quiet>
-            </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${javadoc.version}</version>
+          <configuration>
+            <quiet>true</quiet>
+          </configuration>
         </plugin>
 
         <plugin>
@@ -694,11 +538,11 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <version>${bundle.version}</version>
         <dependencies>
-            <dependency>
-                <groupId>biz.aQute.bnd</groupId>
-                <artifactId>biz.aQute.bndlib</artifactId>
-                <version>${bnd.version}</version>
-            </dependency>
+          <dependency>
+            <groupId>biz.aQute.bnd</groupId>
+            <artifactId>biz.aQute.bndlib</artifactId>
+            <version>${bnd.version}</version>
+          </dependency>
         </dependencies>
         <executions>
           <execution>
@@ -784,12 +628,6 @@
             <id>prepare-agent</id>
             <goals>
               <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>report</id>
-            <goals>
-              <goal>report</goal>
             </goals>
           </execution>
         </executions>
@@ -917,7 +755,7 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${checkstyle.plugin}</version>
         <configuration>
-            <configLocation>${checkstyle.config}</configLocation>
+          <configLocation>${checkstyle.config}</configLocation>
         </configuration>
       </plugin>
 
@@ -1126,15 +964,6 @@
               </execution>
             </executions>
           </plugin>
-
-          <!-- Skip license plugin during release as maven release is now shallow cloned -->
-          <plugin>
-            <groupId>com.mycila</groupId>
-            <artifactId>license-maven-plugin</artifactId>
-            <configuration>
-              <skip>true</skip>
-            </configuration>
-          </plugin>
         </plugins>
       </build>
     </profile>
@@ -1226,7 +1055,7 @@
             <artifactId>license-maven-plugin</artifactId>
             <executions>
               <execution>
-                <phase>process-sources</phase>
+                <phase>compile</phase>
                 <goals>
                   <goal>format</goal>
                 </goals>
