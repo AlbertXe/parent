@@ -6,6 +6,7 @@ import org.apache.ibatis.io.ResourcesV2;
 import org.apache.ibatis.jdbc.ScriptRunnerV2;
 
 import javax.sql.DataSource;
+import java.io.Reader;
 import java.sql.Connection;
 import java.util.Properties;
 
@@ -39,6 +40,17 @@ public class BaseDataTestV2 {
         Connection conn = ds.getConnection();
         ScriptRunnerV2 runner = new ScriptRunnerV2(conn);
         runner.setAutoCommit(true);
-        ////xie
+        runner.setStopOnError(false);
+
+        runScript(runner,resource);
+        conn.close();
+    }
+
+    @SneakyThrows
+    public static void runScript(ScriptRunnerV2 runnerV2, String resource) {
+        Reader reader = ResourcesV2.getResourceAsReader(resource, null);
+        runnerV2.runScript(reader);
+        reader.close();
+
     }
 }
